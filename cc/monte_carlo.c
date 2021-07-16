@@ -23,7 +23,7 @@ int main() {
 
 		pi = 4 * area / i;
 		error = 3.14159265358979323846264338327950288419716 - pi;	
-		//printf("%dth, pi : %.20f \n", i, pi);
+		printf("%dth, pi : %.20f \n", i, pi);
 
 		if (fabs(error) < 1e-10) {
 			printf("Error : %.15f \n", error);
