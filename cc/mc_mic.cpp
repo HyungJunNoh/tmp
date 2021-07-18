@@ -20,7 +20,7 @@ int main()
 
   //integer : -2,147,483,648 ~ 2,147,483,646. i.e. ~ 2G
   //int n=1000000000; //please make sure that the number is not over int range.
-  int n=100000000/totalpe; //please make sure that the number is not over int range.
+  long int n=1000000000/totalpe; //please make sure that the number is not over int range.
   double area_per_particle = 4.0 / (n * totalpe);
 
   //====================For Seeding
@@ -36,7 +36,7 @@ int main()
 
 	double area_total = 0.0;
   double area_circle = 0.0;
-  for(int i=0; i<n; i++)
+  for(long int i=0; i<n; i++)
   {
     double x = dis(gen);
     double y = dis(gen);

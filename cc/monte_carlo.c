@@ -9,7 +9,7 @@ int main() {
 	srand(time(NULL));
 	
 	double area = 0;
-	long int n = 10000000000000;
+	long int n = 100000000000000;
 	double pi;
 	double error = 3;
 
@@ -23,9 +23,9 @@ int main() {
 
 		pi = 4 * area / i;
 		error = 3.14159265358979323846264338327950288419716 - pi;	
-		printf("%dth, pi : %.20f \n", i, pi);
+		//printf("%dth, pi : %.20f \n", i, pi);
 
-		if (fabs(error) < 1e-10) {
+		if (fabs(error) < 1e-12) {
 			printf("Error : %.15f \n", error);
 			printf("%dth, pi : %.15f \n", i, pi);
 			break;
