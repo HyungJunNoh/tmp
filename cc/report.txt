@@ -1,0 +1,1457 @@
+
+Analyzing loop at /opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3331
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3331:34: note: ===== analyze_loop_nest =====
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3331:34: note: === vect_analyze_loop_form ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3331:34: note: not vectorized: multiple nested loops.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3331:34: note: bad loop form.
+
+Analyzing loop at /opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ===== analyze_loop_nest =====
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: === vect_analyze_loop_form ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: === get_loop_niters ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: got vectype for stmt: _54 = __urng_15(D)->_M_x[__k_103];
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: got vectype for stmt: _57 = __urng_15(D)->_M_x[_56];
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: got vectype for stmt: _61 = __urng_15(D)->_M_x[_60];
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: got vectype for stmt: __urng_15(D)->_M_x[__k_103] = prephitmp_134;
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: === vect_analyze_scalar_cycles ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: Analyze phi: __k_103 = PHI <_56(21), 227(28)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: Access function of PHI: {227, +, 1}_2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: step: 1,  init: 227
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: Detected induction.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: Analyze phi: .MEM_105 = PHI <.MEM_84(21), .MEM_131(28)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: Analyze phi: ivtmp_51 = PHI <ivtmp_21(21), 396(28)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: Access function of PHI: {396, +, 18446744073709551615}_2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: step: 18446744073709551615,  init: 396
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: Detected induction.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: === vect_pattern_recog ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand _54
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: _54 = __urng_15(D)->_M_x[__k_103];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand _57
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: _57 = __urng_15(D)->_M_x[_56];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: === vect_analyze_data_ref_accesses ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: === vect_mark_stmts_to_be_vectorized ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: init: phi relevant? __k_103 = PHI <_56(21), 227(28)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: init: phi relevant? .MEM_105 = PHI <.MEM_84(21), .MEM_131(28)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: init: phi relevant? ivtmp_51 = PHI <ivtmp_21(21), 396(28)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: init: stmt relevant? _54 = __urng_15(D)->_M_x[__k_103];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: init: stmt relevant? _55 = _54 & 18446744071562067968;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: init: stmt relevant? _56 = __k_103 + 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: init: stmt relevant? _57 = __urng_15(D)->_M_x[_56];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: init: stmt relevant? _58 = _57 & 2147483647;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: init: stmt relevant? __y_59 = _55 | _58;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: init: stmt relevant? _60 = __k_103 + 18446744073709551389;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: init: stmt relevant? _61 = __urng_15(D)->_M_x[_60];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: init: stmt relevant? _62 = __y_59 >> 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: init: stmt relevant? _63 = _61 ^ _62;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: init: stmt relevant? _64 = __y_59 & 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: init: stmt relevant? _133 = _63 ^ 2567483615;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: init: stmt relevant? prephitmp_134 = _64 == 0 ? _63 : _133;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: init: stmt relevant? __urng_15(D)->_M_x[__k_103] = prephitmp_134;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vec_stmt_relevant_p: stmt has vdefs.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: mark relevant 5, live 0: __urng_15(D)->_M_x[__k_103] = prephitmp_134;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: init: stmt relevant? ivtmp_21 = ivtmp_51 - 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: init: stmt relevant? if (ivtmp_21 == 0)
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: worklist: examine stmt: __urng_15(D)->_M_x[__k_103] = prephitmp_134;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand prephitmp_134
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: prephitmp_134 = _64 == 0 ? _63 : _133;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: mark relevant 5, live 0: prephitmp_134 = _64 == 0 ? _63 : _133;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: worklist: examine stmt: prephitmp_134 = _64 == 0 ? _63 : _133;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand _64
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: _64 = __y_59 & 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: mark relevant 5, live 0: _64 = __y_59 & 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand _63
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: _63 = _61 ^ _62;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: mark relevant 5, live 0: _63 = _61 ^ _62;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand _133
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: _133 = _63 ^ 2567483615;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: mark relevant 5, live 0: _133 = _63 ^ 2567483615;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: worklist: examine stmt: _133 = _63 ^ 2567483615;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand _63
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: _63 = _61 ^ _62;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: mark relevant 5, live 0: _63 = _61 ^ _62;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: already marked relevant/live.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: worklist: examine stmt: _63 = _61 ^ _62;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand _61
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: _61 = __urng_15(D)->_M_x[_60];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: mark relevant 5, live 0: _61 = __urng_15(D)->_M_x[_60];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand _62
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: _62 = __y_59 >> 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: mark relevant 5, live 0: _62 = __y_59 >> 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: worklist: examine stmt: _62 = __y_59 >> 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand __y_59
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: __y_59 = _55 | _58;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: mark relevant 5, live 0: __y_59 = _55 | _58;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: worklist: examine stmt: __y_59 = _55 | _58;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand _55
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: _55 = _54 & 18446744071562067968;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: mark relevant 5, live 0: _55 = _54 & 18446744071562067968;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand _58
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: _58 = _57 & 2147483647;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: mark relevant 5, live 0: _58 = _57 & 2147483647;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: worklist: examine stmt: _58 = _57 & 2147483647;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand _57
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: _57 = __urng_15(D)->_M_x[_56];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: mark relevant 5, live 0: _57 = __urng_15(D)->_M_x[_56];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: worklist: examine stmt: _57 = __urng_15(D)->_M_x[_56];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: worklist: examine stmt: _55 = _54 & 18446744071562067968;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand _54
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: _54 = __urng_15(D)->_M_x[__k_103];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: mark relevant 5, live 0: _54 = __urng_15(D)->_M_x[__k_103];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: worklist: examine stmt: _54 = __urng_15(D)->_M_x[__k_103];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: worklist: examine stmt: _61 = __urng_15(D)->_M_x[_60];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: worklist: examine stmt: _64 = __y_59 & 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand __y_59
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: __y_59 = _55 | _58;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: mark relevant 5, live 0: __y_59 = _55 | _58;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: already marked relevant/live.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: === vect_analyze_data_ref_dependences ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: dependence distance  = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: dependence distance == 0 between __urng_15(D)->_M_x[__k_103] and __urng_15(D)->_M_x[__k_103]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: dependence distance  = 1.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: dependence distance negative.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: dependence distance  = 227.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: adjusting maximal vectorization factor to 227
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: dependence distance >= VF.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: === vect_determine_vectorization_factor ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining phi: __k_103 = PHI <_56(21), 227(28)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining phi: .MEM_105 = PHI <.MEM_84(21), .MEM_131(28)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining phi: ivtmp_51 = PHI <ivtmp_21(21), 396(28)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: _54 = __urng_15(D)->_M_x[__k_103];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: nunits = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: _55 = _54 & 18446744071562067968;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: nunits = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: _56 = __k_103 + 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: skip.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: _57 = __urng_15(D)->_M_x[_56];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: nunits = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: _58 = _57 & 2147483647;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: nunits = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: __y_59 = _55 | _58;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: nunits = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: _60 = __k_103 + 18446744073709551389;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: skip.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: _61 = __urng_15(D)->_M_x[_60];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: nunits = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: _62 = __y_59 >> 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: nunits = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: _63 = _61 ^ _62;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: nunits = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: _64 = __y_59 & 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: nunits = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: _133 = _63 ^ 2567483615;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: nunits = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: prephitmp_134 = _64 == 0 ? _63 : _133;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: nunits = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: __urng_15(D)->_M_x[__k_103] = prephitmp_134;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: nunits = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: ivtmp_21 = ivtmp_51 - 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: skip.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: if (ivtmp_21 == 0)
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: skip.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vectorization factor = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: === vect_analyze_slp ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: === vect_make_slp_decision ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vectorization_factor = 2, niters = 396
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: === vect_analyze_data_refs_alignment ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: accesses have the same alignment: __urng_15(D)->_M_x[__k_103] and __urng_15(D)->_M_x[__k_103]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: accesses have the same alignment: __urng_15(D)->_M_x[_56] and __urng_15(D)->_M_x[_60]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: recording new base alignment for __urng_15(D)
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note:   alignment:    8
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note:   misalignment: 0
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note:   based on:     _54 = __urng_15(D)->_M_x[__k_103];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_compute_data_ref_alignment:
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: can't force alignment of ref: __urng_15(D)->_M_x[__k_103]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_compute_data_ref_alignment:
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: can't force alignment of ref: __urng_15(D)->_M_x[_56]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_compute_data_ref_alignment:
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: can't force alignment of ref: __urng_15(D)->_M_x[_60]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_compute_data_ref_alignment:
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: can't force alignment of ref: __urng_15(D)->_M_x[__k_103]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: === vect_prune_runtime_alias_test_list ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: === vect_enhance_data_refs_alignment ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: Unknown misalignment, naturally aligned
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: Unknown misalignment, naturally aligned
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: Unknown misalignment, naturally aligned
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: Unknown misalignment, naturally aligned
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_can_advance_ivs_p:
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: Analyze phi: __k_103 = PHI <_56(21), 227(28)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: Analyze phi: .MEM_105 = PHI <.MEM_84(21), .MEM_131(28)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: reduc or virtual phi. skip.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: Analyze phi: ivtmp_51 = PHI <ivtmp_21(21), 396(28)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_model_load_cost: aligned.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_get_data_access_cost: inside_cost = 12, outside_cost = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: Setting misalignment to unknown (-1).
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_model_load_cost: unaligned supported by hardware.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_get_data_access_cost: inside_cost = 24, outside_cost = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: Setting misalignment to unknown (-1).
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_model_load_cost: unaligned supported by hardware.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_get_data_access_cost: inside_cost = 36, outside_cost = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_model_store_cost: aligned.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_get_data_access_cost: inside_cost = 48, outside_cost = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_model_load_cost: aligned.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_get_data_access_cost: inside_cost = 12, outside_cost = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: Setting misalignment to unknown (-1).
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_model_load_cost: unaligned supported by hardware.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_get_data_access_cost: inside_cost = 24, outside_cost = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: Setting misalignment to unknown (-1).
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_model_load_cost: unaligned supported by hardware.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_get_data_access_cost: inside_cost = 36, outside_cost = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_model_store_cost: aligned.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_get_data_access_cost: inside_cost = 48, outside_cost = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_model_load_cost: unaligned supported by hardware.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_get_data_access_cost: inside_cost = 12, outside_cost = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_model_load_cost: unaligned supported by hardware.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_get_data_access_cost: inside_cost = 24, outside_cost = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_model_load_cost: unaligned supported by hardware.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_get_data_access_cost: inside_cost = 36, outside_cost = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_model_store_cost: unaligned supported by hardware.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_get_data_access_cost: inside_cost = 48, outside_cost = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: Vectorizing an unaligned access.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: Vectorizing an unaligned access.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: Vectorizing an unaligned access.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: Vectorizing an unaligned access.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: === vect_analyze_loop_operations ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: examining phi: __k_103 = PHI <_56(21), 227(28)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: examining phi: .MEM_105 = PHI <.MEM_84(21), .MEM_131(28)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: examining phi: ivtmp_51 = PHI <ivtmp_21(21), 396(28)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: _54 = __urng_15(D)->_M_x[__k_103];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: num. args = 4 (not unary/binary/ternary op).
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand __urng_15(D)->_M_x[__k_103]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: not ssa-name.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: use not simple.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: can't use a fully-masked loop because the target doesn't have the appropriate masked load or store.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_model_load_cost: unaligned supported by hardware.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_model_load_cost: inside_cost = 12, prologue_cost = 0 .
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: _55 = _54 & 18446744071562067968;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand _54
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: _54 = __urng_15(D)->_M_x[__k_103];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand 18446744071562067968
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: === vectorizable_operation ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_model_simple_cost: inside_cost = 4, prologue_cost = 4 .
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: _56 = __k_103 + 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: irrelevant.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: _57 = __urng_15(D)->_M_x[_56];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: num. args = 4 (not unary/binary/ternary op).
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand __urng_15(D)->_M_x[_56]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: not ssa-name.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: use not simple.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_model_load_cost: unaligned supported by hardware.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_model_load_cost: inside_cost = 12, prologue_cost = 0 .
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: _58 = _57 & 2147483647;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand _57
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: _57 = __urng_15(D)->_M_x[_56];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand 2147483647
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: === vectorizable_operation ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_model_simple_cost: inside_cost = 4, prologue_cost = 4 .
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: __y_59 = _55 | _58;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand _55
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: _55 = _54 & 18446744071562067968;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand _58
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: _58 = _57 & 2147483647;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: === vectorizable_operation ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_model_simple_cost: inside_cost = 4, prologue_cost = 0 .
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: _60 = __k_103 + 18446744073709551389;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: irrelevant.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: _61 = __urng_15(D)->_M_x[_60];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: num. args = 4 (not unary/binary/ternary op).
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand __urng_15(D)->_M_x[_60]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: not ssa-name.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: use not simple.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_model_load_cost: unaligned supported by hardware.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_model_load_cost: inside_cost = 12, prologue_cost = 0 .
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: _62 = __y_59 >> 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand __y_59
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: __y_59 = _55 | _58;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand 1
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vector/scalar shift/rotate found.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: === vectorizable_shift ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_model_simple_cost: inside_cost = 4, prologue_cost = 4 .
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: _63 = _61 ^ _62;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand _61
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: _61 = __urng_15(D)->_M_x[_60];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand _62
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: _62 = __y_59 >> 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: === vectorizable_operation ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_model_simple_cost: inside_cost = 4, prologue_cost = 0 .
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: _64 = __y_59 & 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand __y_59
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: __y_59 = _55 | _58;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand 1
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: === vectorizable_operation ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_model_simple_cost: inside_cost = 4, prologue_cost = 4 .
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: _133 = _63 ^ 2567483615;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand _63
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: _63 = _61 ^ _62;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand 2567483615
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: === vectorizable_operation ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_model_simple_cost: inside_cost = 4, prologue_cost = 4 .
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ==> examining statement: prephitmp_134 = _64 == 0 ? _63 : _133;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand _64 == 0
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: not ssa-name.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: use not simple.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand _64
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: _64 = __y_59 & 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand _63
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: _63 = _61 ^ _62;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: vect_is_simple_use: operand _133
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: def_stmt: _133 = _63 ^ 2567483615;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: not vectorized: relevant stmt not supported: prephitmp_134 = _64 == 0 ? _63 : _133;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: bad operation or unsupported loop bound.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: got vectype for stmt: _54 = __urng_15(D)->_M_x[__k_103];
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: got vectype for stmt: _57 = __urng_15(D)->_M_x[_56];
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: got vectype for stmt: _61 = __urng_15(D)->_M_x[_60];
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: got vectype for stmt: __urng_15(D)->_M_x[__k_103] = prephitmp_134;
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: === vect_analyze_data_ref_accesses ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: Detected interleaving load __urng_15(D)->_M_x[_60] and __urng_15(D)->_M_x[__k_103]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: Detected interleaving load __urng_15(D)->_M_x[_60] and __urng_15(D)->_M_x[_56]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: Detected interleaving load of size 229 starting with _61 = __urng_15(D)->_M_x[_60];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: not consecutive access __urng_15(D)->_M_x[__k_103] = prephitmp_134;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: not vectorized: no grouped stores in basic block.
+
+Analyzing loop at /opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ===== analyze_loop_nest =====
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === vect_analyze_loop_form ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === get_loop_niters ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: got vectype for stmt: _40 = __urng_15(D)->_M_x[__k_102];
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: got vectype for stmt: _43 = __urng_15(D)->_M_x[_42];
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: got vectype for stmt: _47 = __urng_15(D)->_M_x[_46];
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: got vectype for stmt: __urng_15(D)->_M_x[__k_102] = prephitmp_129;
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === vect_analyze_scalar_cycles ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: Analyze phi: __k_102 = PHI <_42(22), 0(35)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: Access function of PHI: {0, +, 1}_3
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: step: 1,  init: 0
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: Detected induction.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: Analyze phi: .MEM_104 = PHI <.MEM_83(22), .MEM_101(35)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: Analyze phi: ivtmp_132 = PHI <ivtmp_127(22), 227(35)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: Access function of PHI: {227, +, 18446744073709551615}_3
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: step: 18446744073709551615,  init: 227
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: Detected induction.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === vect_pattern_recog ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand _40
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: _40 = __urng_15(D)->_M_x[__k_102];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand _43
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: _43 = __urng_15(D)->_M_x[_42];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === vect_analyze_data_ref_accesses ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === vect_mark_stmts_to_be_vectorized ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: init: phi relevant? __k_102 = PHI <_42(22), 0(35)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: init: phi relevant? .MEM_104 = PHI <.MEM_83(22), .MEM_101(35)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: init: phi relevant? ivtmp_132 = PHI <ivtmp_127(22), 227(35)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: init: stmt relevant? _40 = __urng_15(D)->_M_x[__k_102];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: init: stmt relevant? _41 = _40 & 18446744071562067968;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: init: stmt relevant? _42 = __k_102 + 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: init: stmt relevant? _43 = __urng_15(D)->_M_x[_42];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: init: stmt relevant? _44 = _43 & 2147483647;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: init: stmt relevant? __y_45 = _41 | _44;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: init: stmt relevant? _46 = __k_102 + 397;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: init: stmt relevant? _47 = __urng_15(D)->_M_x[_46];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: init: stmt relevant? _48 = __y_45 >> 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: init: stmt relevant? _49 = _47 ^ _48;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: init: stmt relevant? _50 = __y_45 & 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: init: stmt relevant? _128 = _49 ^ 2567483615;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: init: stmt relevant? prephitmp_129 = _50 == 0 ? _49 : _128;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: init: stmt relevant? __urng_15(D)->_M_x[__k_102] = prephitmp_129;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vec_stmt_relevant_p: stmt has vdefs.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: mark relevant 5, live 0: __urng_15(D)->_M_x[__k_102] = prephitmp_129;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: init: stmt relevant? ivtmp_127 = ivtmp_132 - 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: init: stmt relevant? if (ivtmp_127 == 0)
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: worklist: examine stmt: __urng_15(D)->_M_x[__k_102] = prephitmp_129;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand prephitmp_129
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: prephitmp_129 = _50 == 0 ? _49 : _128;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: mark relevant 5, live 0: prephitmp_129 = _50 == 0 ? _49 : _128;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: worklist: examine stmt: prephitmp_129 = _50 == 0 ? _49 : _128;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand _50
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: _50 = __y_45 & 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: mark relevant 5, live 0: _50 = __y_45 & 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand _49
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: _49 = _47 ^ _48;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: mark relevant 5, live 0: _49 = _47 ^ _48;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand _128
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: _128 = _49 ^ 2567483615;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: mark relevant 5, live 0: _128 = _49 ^ 2567483615;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: worklist: examine stmt: _128 = _49 ^ 2567483615;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand _49
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: _49 = _47 ^ _48;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: mark relevant 5, live 0: _49 = _47 ^ _48;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: already marked relevant/live.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: worklist: examine stmt: _49 = _47 ^ _48;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand _47
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: _47 = __urng_15(D)->_M_x[_46];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: mark relevant 5, live 0: _47 = __urng_15(D)->_M_x[_46];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand _48
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: _48 = __y_45 >> 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: mark relevant 5, live 0: _48 = __y_45 >> 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: worklist: examine stmt: _48 = __y_45 >> 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand __y_45
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: __y_45 = _41 | _44;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: mark relevant 5, live 0: __y_45 = _41 | _44;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: worklist: examine stmt: __y_45 = _41 | _44;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand _41
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: _41 = _40 & 18446744071562067968;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: mark relevant 5, live 0: _41 = _40 & 18446744071562067968;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand _44
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: _44 = _43 & 2147483647;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: mark relevant 5, live 0: _44 = _43 & 2147483647;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: worklist: examine stmt: _44 = _43 & 2147483647;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand _43
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: _43 = __urng_15(D)->_M_x[_42];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: mark relevant 5, live 0: _43 = __urng_15(D)->_M_x[_42];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: worklist: examine stmt: _43 = __urng_15(D)->_M_x[_42];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: worklist: examine stmt: _41 = _40 & 18446744071562067968;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand _40
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: _40 = __urng_15(D)->_M_x[__k_102];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: mark relevant 5, live 0: _40 = __urng_15(D)->_M_x[__k_102];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: worklist: examine stmt: _40 = __urng_15(D)->_M_x[__k_102];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: worklist: examine stmt: _47 = __urng_15(D)->_M_x[_46];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: worklist: examine stmt: _50 = __y_45 & 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand __y_45
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: __y_45 = _41 | _44;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: mark relevant 5, live 0: __y_45 = _41 | _44;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: already marked relevant/live.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === vect_analyze_data_ref_dependences ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: dependence distance  = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: dependence distance == 0 between __urng_15(D)->_M_x[__k_102] and __urng_15(D)->_M_x[__k_102]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: dependence distance  = 1.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: dependence distance negative.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === vect_determine_vectorization_factor ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining phi: __k_102 = PHI <_42(22), 0(35)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining phi: .MEM_104 = PHI <.MEM_83(22), .MEM_101(35)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining phi: ivtmp_132 = PHI <ivtmp_127(22), 227(35)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: _40 = __urng_15(D)->_M_x[__k_102];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: nunits = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: _41 = _40 & 18446744071562067968;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: nunits = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: _42 = __k_102 + 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: skip.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: _43 = __urng_15(D)->_M_x[_42];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: nunits = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: _44 = _43 & 2147483647;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: nunits = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: __y_45 = _41 | _44;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: nunits = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: _46 = __k_102 + 397;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: skip.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: _47 = __urng_15(D)->_M_x[_46];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: nunits = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: _48 = __y_45 >> 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: nunits = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: _49 = _47 ^ _48;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: nunits = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: _50 = __y_45 & 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: nunits = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: _128 = _49 ^ 2567483615;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: nunits = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: prephitmp_129 = _50 == 0 ? _49 : _128;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: nunits = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: __urng_15(D)->_M_x[__k_102] = prephitmp_129;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: get vectype for scalar type:  long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vectype: vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: nunits = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: ivtmp_127 = ivtmp_132 - 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: skip.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: if (ivtmp_127 == 0)
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: skip.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vectorization factor = 2
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === vect_analyze_slp ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === vect_make_slp_decision ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vectorization_factor = 2, niters = 227
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === vect_analyze_data_refs_alignment ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: accesses have the same alignment: __urng_15(D)->_M_x[__k_102] and __urng_15(D)->_M_x[__k_102]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: recording new base alignment for __urng_15(D)
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note:   alignment:    8
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note:   misalignment: 0
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note:   based on:     _40 = __urng_15(D)->_M_x[__k_102];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_compute_data_ref_alignment:
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: can't force alignment of ref: __urng_15(D)->_M_x[__k_102]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_compute_data_ref_alignment:
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: can't force alignment of ref: __urng_15(D)->_M_x[_42]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_compute_data_ref_alignment:
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: can't force alignment of ref: __urng_15(D)->_M_x[_46]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_compute_data_ref_alignment:
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: can't force alignment of ref: __urng_15(D)->_M_x[__k_102]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === vect_prune_runtime_alias_test_list ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === vect_enhance_data_refs_alignment ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: Unknown misalignment, naturally aligned
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: Unknown misalignment, naturally aligned
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: Unknown misalignment, naturally aligned
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: Unknown misalignment, naturally aligned
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_can_advance_ivs_p:
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: Analyze phi: __k_102 = PHI <_42(22), 0(35)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: Analyze phi: .MEM_104 = PHI <.MEM_83(22), .MEM_101(35)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: reduc or virtual phi. skip.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: Analyze phi: ivtmp_132 = PHI <ivtmp_127(22), 227(35)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_model_load_cost: aligned.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_get_data_access_cost: inside_cost = 12, outside_cost = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: Setting misalignment to unknown (-1).
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_model_load_cost: unaligned supported by hardware.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_get_data_access_cost: inside_cost = 24, outside_cost = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: Setting misalignment to unknown (-1).
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_model_load_cost: unaligned supported by hardware.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_get_data_access_cost: inside_cost = 36, outside_cost = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_model_store_cost: aligned.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_get_data_access_cost: inside_cost = 48, outside_cost = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_model_load_cost: aligned.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_get_data_access_cost: inside_cost = 12, outside_cost = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: Setting misalignment to unknown (-1).
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_model_load_cost: unaligned supported by hardware.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_get_data_access_cost: inside_cost = 24, outside_cost = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: Setting misalignment to unknown (-1).
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_model_load_cost: unaligned supported by hardware.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_get_data_access_cost: inside_cost = 36, outside_cost = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_model_store_cost: aligned.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_get_data_access_cost: inside_cost = 48, outside_cost = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_model_load_cost: unaligned supported by hardware.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_get_data_access_cost: inside_cost = 12, outside_cost = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_model_load_cost: unaligned supported by hardware.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_get_data_access_cost: inside_cost = 24, outside_cost = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_model_load_cost: unaligned supported by hardware.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_get_data_access_cost: inside_cost = 36, outside_cost = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_model_store_cost: unaligned supported by hardware.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_get_data_access_cost: inside_cost = 48, outside_cost = 0.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: Vectorizing an unaligned access.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: Vectorizing an unaligned access.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: Vectorizing an unaligned access.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: Vectorizing an unaligned access.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === vect_analyze_loop_operations ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: examining phi: __k_102 = PHI <_42(22), 0(35)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: examining phi: .MEM_104 = PHI <.MEM_83(22), .MEM_101(35)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: examining phi: ivtmp_132 = PHI <ivtmp_127(22), 227(35)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: _40 = __urng_15(D)->_M_x[__k_102];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: num. args = 4 (not unary/binary/ternary op).
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand __urng_15(D)->_M_x[__k_102]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: not ssa-name.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: use not simple.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: can't use a fully-masked loop because the target doesn't have the appropriate masked load or store.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_model_load_cost: unaligned supported by hardware.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_model_load_cost: inside_cost = 12, prologue_cost = 0 .
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: _41 = _40 & 18446744071562067968;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand _40
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: _40 = __urng_15(D)->_M_x[__k_102];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand 18446744071562067968
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === vectorizable_operation ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_model_simple_cost: inside_cost = 4, prologue_cost = 4 .
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: _42 = __k_102 + 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: irrelevant.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: _43 = __urng_15(D)->_M_x[_42];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: num. args = 4 (not unary/binary/ternary op).
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand __urng_15(D)->_M_x[_42]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: not ssa-name.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: use not simple.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_model_load_cost: unaligned supported by hardware.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_model_load_cost: inside_cost = 12, prologue_cost = 0 .
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: _44 = _43 & 2147483647;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand _43
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: _43 = __urng_15(D)->_M_x[_42];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand 2147483647
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === vectorizable_operation ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_model_simple_cost: inside_cost = 4, prologue_cost = 4 .
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: __y_45 = _41 | _44;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand _41
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: _41 = _40 & 18446744071562067968;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand _44
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: _44 = _43 & 2147483647;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === vectorizable_operation ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_model_simple_cost: inside_cost = 4, prologue_cost = 0 .
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: _46 = __k_102 + 397;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: irrelevant.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: _47 = __urng_15(D)->_M_x[_46];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: num. args = 4 (not unary/binary/ternary op).
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand __urng_15(D)->_M_x[_46]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: not ssa-name.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: use not simple.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_model_load_cost: unaligned supported by hardware.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_model_load_cost: inside_cost = 12, prologue_cost = 0 .
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: _48 = __y_45 >> 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand __y_45
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: __y_45 = _41 | _44;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand 1
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vector/scalar shift/rotate found.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === vectorizable_shift ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_model_simple_cost: inside_cost = 4, prologue_cost = 4 .
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: _49 = _47 ^ _48;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand _47
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: _47 = __urng_15(D)->_M_x[_46];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand _48
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: _48 = __y_45 >> 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === vectorizable_operation ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_model_simple_cost: inside_cost = 4, prologue_cost = 0 .
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: _50 = __y_45 & 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand __y_45
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: __y_45 = _41 | _44;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand 1
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === vectorizable_operation ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_model_simple_cost: inside_cost = 4, prologue_cost = 4 .
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: _128 = _49 ^ 2567483615;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand _49
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: _49 = _47 ^ _48;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand 2567483615
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === vectorizable_operation ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_model_simple_cost: inside_cost = 4, prologue_cost = 4 .
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ==> examining statement: prephitmp_129 = _50 == 0 ? _49 : _128;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand _50 == 0
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: not ssa-name.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: use not simple.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand _50
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: _50 = __y_45 & 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand _49
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: _49 = _47 ^ _48;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: vect_is_simple_use: operand _128
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: def_stmt: _128 = _49 ^ 2567483615;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: not vectorized: relevant stmt not supported: prephitmp_129 = _50 == 0 ? _49 : _128;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: bad operation or unsupported loop bound.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: got vectype for stmt: _40 = __urng_15(D)->_M_x[__k_102];
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: got vectype for stmt: _43 = __urng_15(D)->_M_x[_42];
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: got vectype for stmt: _47 = __urng_15(D)->_M_x[_46];
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: got vectype for stmt: __urng_15(D)->_M_x[__k_102] = prephitmp_129;
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === vect_analyze_data_ref_accesses ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: Detected interleaving load __urng_15(D)->_M_x[__k_102] and __urng_15(D)->_M_x[_42]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: Detected interleaving load __urng_15(D)->_M_x[__k_102] and __urng_15(D)->_M_x[_46]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: Detected interleaving load of size 398 starting with _40 = __urng_15(D)->_M_x[__k_102];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: not consecutive access __urng_15(D)->_M_x[__k_102] = prephitmp_129;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: not vectorized: no grouped stores in basic block.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3315:5: note: vectorized 0 loops in function.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3315:5: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3315:5: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3315:5: note: got vectype for stmt: pretmp_116 = __urng_15(D)->_M_p;
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3315:5: note: not vectorized: not enough data-refs in basic block.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3315:5: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:455:7: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:455:7: note: not vectorized: not enough data-refs in basic block.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:455:7: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:455:7: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:455:7: note: not vectorized: not enough data-refs in basic block.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:455:7: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:455:7: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:455:7: note: got vectype for stmt: _51 = MEM[(long unsigned int *)__urng_15(D)];
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:455:7: note: not vectorized: not enough data-refs in basic block.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:455:7: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:406:26: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:406:26: note: got vectype for stmt: _39 = __urng_15(D)->_M_x[_53];
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:406:26: note: got vectype for stmt: _12 = __urng_15(D)->_M_x[_13];
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:406:26: note: === vect_analyze_data_ref_accesses ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:406:26: note: Detected interleaving load __urng_15(D)->_M_x[_53] and __urng_15(D)->_M_x[_13]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:406:26: note: Detected interleaving load of size 397 starting with _39 = __urng_15(D)->_M_x[_53];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:406:26: note: not vectorized: no grouped stores in basic block.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:406:26: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:406:26: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:406:26: note: not vectorized: not enough data-refs in basic block.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:406:26: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: got vectype for stmt: __urng_15(D)->_M_x[__k_88] = prephitmp_6;
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: not vectorized: not enough data-refs in basic block.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: got vectype for stmt: _100 = MEM[(long unsigned int *)__urng_15(D) + 1816B];
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: not vectorized: not enough data-refs in basic block.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:401:32: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:414:26: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:414:26: note: got vectype for stmt: _110 = __urng_15(D)->_M_x[_111];
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:414:26: note: got vectype for stmt: _106 = __urng_15(D)->_M_x[_107];
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:414:26: note: === vect_analyze_data_ref_accesses ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:414:26: note: Detected interleaving load __urng_15(D)->_M_x[_107] and __urng_15(D)->_M_x[_111]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:414:26: note: Detected interleaving load of size 229 starting with _106 = __urng_15(D)->_M_x[_107];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:414:26: note: not vectorized: no grouped stores in basic block.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:414:26: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:414:26: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:414:26: note: not vectorized: not enough data-refs in basic block.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:414:26: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: got vectype for stmt: __urng_15(D)->_M_x[__k_121] = prephitmp_93;
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: not vectorized: not enough data-refs in basic block.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:409:42: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:420:26: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:420:26: note: got vectype for stmt: _67 = __urng_15(D)->_M_x[623];
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:420:26: note: got vectype for stmt: _69 = __urng_15(D)->_M_x[0];
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:420:26: note: got vectype for stmt: _72 = __urng_15(D)->_M_x[396];
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:420:26: note: === vect_analyze_data_ref_accesses ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:420:26: note: Detected interleaving load __urng_15(D)->_M_x[0] and __urng_15(D)->_M_x[396]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:420:26: note: Detected interleaving load __urng_15(D)->_M_x[0] and __urng_15(D)->_M_x[623]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:420:26: note: Detected interleaving load of size 624 starting with _69 = __urng_15(D)->_M_x[0];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:420:26: note: not vectorized: no grouped stores in basic block.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:420:26: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:420:26: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:420:26: note: not vectorized: not enough data-refs in basic block.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:420:26: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:421:7: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:421:7: note: got vectype for stmt: __urng_15(D)->_M_x[623] = prephitmp_136;
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:421:7: note: got vectype for stmt: __urng_15(D)->_M_p = 0;
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:421:7: note: === vect_analyze_data_ref_accesses ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:421:7: note: Detected interleaving store __urng_15(D)->_M_x[623] and __urng_15(D)->_M_p
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:421:7: note: Detected interleaving store of size 2 starting with __urng_15(D)->_M_x[623] = prephitmp_136;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:421:7: note: === vect_pattern_recog ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:421:7: note: === vect_analyze_slp ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:421:7: note: Build SLP for __urng_15(D)->_M_x[623] = prephitmp_136;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:421:7: note: Build SLP for __urng_15(D)->_M_p = 0;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:421:7: note: Build SLP failed: different operation in stmt __urng_15(D)->_M_p = 0;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:421:7: note: original stmt __urng_15(D)->_M_x[623] = prephitmp_136;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:421:7: note: recording new base alignment for __urng_15(D)
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:421:7: note:   alignment:    8
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:421:7: note:   misalignment: 0
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:421:7: note:   based on:     __urng_15(D)->_M_x[623] = prephitmp_136;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:421:7: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3331:34: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3331:34: note: got vectype for stmt: __urng_15(D)->_M_p = prephitmp_139;
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3331:34: note: got vectype for stmt: __z_27 = __urng_15(D)->_M_x[prephitmp_137];
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3331:34: note: === vect_analyze_data_ref_accesses ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3331:34: note: not consecutive access __urng_15(D)->_M_p = prephitmp_139;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3331:34: note: not consecutive access __z_27 = __urng_15(D)->_M_x[prephitmp_137];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3331:34: note: not vectorized: no grouped stores in basic block.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3331:34: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3331:34: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3337:7: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3337:7: note: not vectorized: not enough data-refs in basic block.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3337:7: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3340:26: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3340:26: note: not vectorized: not enough data-refs in basic block.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3340:26: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3346:14: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:3346:14: note: not vectorized: not enough data-refs in basic block.
+
+Analyzing loop at mc.cpp:44
+mc.cpp:44:19: note: ===== analyze_loop_nest =====
+mc.cpp:44:19: note: === vect_analyze_loop_form ===
+mc.cpp:44:19: note: not vectorized: control flow in loop.
+mc.cpp:44:19: note: bad loop form.
+
+Analyzing loop at mc.cpp:41
+mc.cpp:41:19: note: ===== analyze_loop_nest =====
+mc.cpp:41:19: note: === vect_analyze_loop_form ===
+mc.cpp:41:19: note: === get_loop_niters ===
+mc.cpp:41:19: note: Symbolic number of iterations is (unsigned int) n_28
+mc.cpp:41:19: note: === vect_analyze_data_refs ===
+mc.cpp:41:19: note: got vectype for stmt: _18 = *x.2_34[i_94];
+vector(2) double
+mc.cpp:41:19: note: got vectype for stmt: _20 = *y.3_36[i_94];
+vector(2) double
+mc.cpp:41:19: note: got vectype for stmt: *r2.4_38[i_94] = _22;
+vector(2) double
+mc.cpp:41:19: note: === vect_analyze_scalar_cycles ===
+mc.cpp:41:19: note: Analyze phi: .MEM_84 = PHI <.MEM_41(17), .MEM_43(20)>
+mc.cpp:41:19: note: Analyze phi: i_94 = PHI <0(17), i_44(20)>
+mc.cpp:41:19: note: Access function of PHI: {0, +, 1}_2
+mc.cpp:41:19: note: step: 1,  init: 0
+mc.cpp:41:19: note: Detected induction.
+mc.cpp:41:19: note: === vect_pattern_recog ===
+mc.cpp:41:19: note: vect_is_simple_use: operand _18
+mc.cpp:41:19: note: def_stmt: _18 = *x.2_34[i_94];
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note: vect_is_simple_use: operand _20
+mc.cpp:41:19: note: def_stmt: _20 = *y.3_36[i_94];
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note: === vect_analyze_data_ref_accesses ===
+mc.cpp:41:19: note: === vect_mark_stmts_to_be_vectorized ===
+mc.cpp:41:19: note: init: phi relevant? .MEM_84 = PHI <.MEM_41(17), .MEM_43(20)>
+mc.cpp:41:19: note: init: phi relevant? i_94 = PHI <0(17), i_44(20)>
+mc.cpp:41:19: note: init: stmt relevant? _18 = *x.2_34[i_94];
+mc.cpp:41:19: note: init: stmt relevant? _19 = _18 * _18;
+mc.cpp:41:19: note: init: stmt relevant? _20 = *y.3_36[i_94];
+mc.cpp:41:19: note: init: stmt relevant? _21 = _20 * _20;
+mc.cpp:41:19: note: init: stmt relevant? _22 = _19 + _21;
+mc.cpp:41:19: note: init: stmt relevant? *r2.4_38[i_94] = _22;
+mc.cpp:41:19: note: vec_stmt_relevant_p: stmt has vdefs.
+mc.cpp:41:19: note: mark relevant 5, live 0: *r2.4_38[i_94] = _22;
+mc.cpp:41:19: note: init: stmt relevant? i_44 = i_94 + 1;
+mc.cpp:41:19: note: init: stmt relevant? if (n_28 <= i_44)
+mc.cpp:41:19: note: worklist: examine stmt: *r2.4_38[i_94] = _22;
+mc.cpp:41:19: note: vect_is_simple_use: operand _22
+mc.cpp:41:19: note: def_stmt: _22 = _19 + _21;
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note: mark relevant 5, live 0: _22 = _19 + _21;
+mc.cpp:41:19: note: worklist: examine stmt: _22 = _19 + _21;
+mc.cpp:41:19: note: vect_is_simple_use: operand _19
+mc.cpp:41:19: note: def_stmt: _19 = _18 * _18;
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note: mark relevant 5, live 0: _19 = _18 * _18;
+mc.cpp:41:19: note: vect_is_simple_use: operand _21
+mc.cpp:41:19: note: def_stmt: _21 = _20 * _20;
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note: mark relevant 5, live 0: _21 = _20 * _20;
+mc.cpp:41:19: note: worklist: examine stmt: _21 = _20 * _20;
+mc.cpp:41:19: note: vect_is_simple_use: operand _20
+mc.cpp:41:19: note: def_stmt: _20 = *y.3_36[i_94];
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note: mark relevant 5, live 0: _20 = *y.3_36[i_94];
+mc.cpp:41:19: note: vect_is_simple_use: operand _20
+mc.cpp:41:19: note: def_stmt: _20 = *y.3_36[i_94];
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note: mark relevant 5, live 0: _20 = *y.3_36[i_94];
+mc.cpp:41:19: note: already marked relevant/live.
+mc.cpp:41:19: note: worklist: examine stmt: _20 = *y.3_36[i_94];
+mc.cpp:41:19: note: worklist: examine stmt: _19 = _18 * _18;
+mc.cpp:41:19: note: vect_is_simple_use: operand _18
+mc.cpp:41:19: note: def_stmt: _18 = *x.2_34[i_94];
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note: mark relevant 5, live 0: _18 = *x.2_34[i_94];
+mc.cpp:41:19: note: vect_is_simple_use: operand _18
+mc.cpp:41:19: note: def_stmt: _18 = *x.2_34[i_94];
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note: mark relevant 5, live 0: _18 = *x.2_34[i_94];
+mc.cpp:41:19: note: already marked relevant/live.
+mc.cpp:41:19: note: worklist: examine stmt: _18 = *x.2_34[i_94];
+mc.cpp:41:19: note: === vect_analyze_data_ref_dependences ===
+mc.cpp:41:19: note: === vect_determine_vectorization_factor ===
+mc.cpp:41:19: note: ==> examining phi: .MEM_84 = PHI <.MEM_41(17), .MEM_43(20)>
+mc.cpp:41:19: note: ==> examining phi: i_94 = PHI <0(17), i_44(20)>
+mc.cpp:41:19: note: ==> examining statement: _18 = *x.2_34[i_94];
+mc.cpp:41:19: note: get vectype for scalar type:  double
+mc.cpp:41:19: note: vectype: vector(2) double
+mc.cpp:41:19: note: nunits = 2
+mc.cpp:41:19: note: ==> examining statement: _19 = _18 * _18;
+mc.cpp:41:19: note: get vectype for scalar type:  double
+mc.cpp:41:19: note: vectype: vector(2) double
+mc.cpp:41:19: note: get vectype for scalar type:  double
+mc.cpp:41:19: note: vectype: vector(2) double
+mc.cpp:41:19: note: nunits = 2
+mc.cpp:41:19: note: ==> examining statement: _20 = *y.3_36[i_94];
+mc.cpp:41:19: note: get vectype for scalar type:  double
+mc.cpp:41:19: note: vectype: vector(2) double
+mc.cpp:41:19: note: nunits = 2
+mc.cpp:41:19: note: ==> examining statement: _21 = _20 * _20;
+mc.cpp:41:19: note: get vectype for scalar type:  double
+mc.cpp:41:19: note: vectype: vector(2) double
+mc.cpp:41:19: note: get vectype for scalar type:  double
+mc.cpp:41:19: note: vectype: vector(2) double
+mc.cpp:41:19: note: nunits = 2
+mc.cpp:41:19: note: ==> examining statement: _22 = _19 + _21;
+mc.cpp:41:19: note: get vectype for scalar type:  double
+mc.cpp:41:19: note: vectype: vector(2) double
+mc.cpp:41:19: note: get vectype for scalar type:  double
+mc.cpp:41:19: note: vectype: vector(2) double
+mc.cpp:41:19: note: nunits = 2
+mc.cpp:41:19: note: ==> examining statement: *r2.4_38[i_94] = _22;
+mc.cpp:41:19: note: get vectype for scalar type:  double
+mc.cpp:41:19: note: vectype: vector(2) double
+mc.cpp:41:19: note: nunits = 2
+mc.cpp:41:19: note: ==> examining statement: i_44 = i_94 + 1;
+mc.cpp:41:19: note: skip.
+mc.cpp:41:19: note: ==> examining statement: if (n_28 <= i_44)
+mc.cpp:41:19: note: skip.
+mc.cpp:41:19: note: vectorization factor = 2
+mc.cpp:41:19: note: === vect_analyze_slp ===
+mc.cpp:41:19: note: === vect_make_slp_decision ===
+mc.cpp:41:19: note: === vect_analyze_data_refs_alignment ===
+mc.cpp:41:19: note: recording new base alignment for x.2_34
+mc.cpp:41:19: note:   alignment:    8
+mc.cpp:41:19: note:   misalignment: 0
+mc.cpp:41:19: note:   based on:     _18 = *x.2_34[i_94];
+mc.cpp:41:19: note: recording new base alignment for y.3_36
+mc.cpp:41:19: note:   alignment:    8
+mc.cpp:41:19: note:   misalignment: 0
+mc.cpp:41:19: note:   based on:     _20 = *y.3_36[i_94];
+mc.cpp:41:19: note: recording new base alignment for r2.4_38
+mc.cpp:41:19: note:   alignment:    8
+mc.cpp:41:19: note:   misalignment: 0
+mc.cpp:41:19: note:   based on:     *r2.4_38[i_94] = _22;
+mc.cpp:41:19: note: vect_compute_data_ref_alignment:
+mc.cpp:41:19: note: can't force alignment of ref: *x.2_34[i_94]
+mc.cpp:41:19: note: vect_compute_data_ref_alignment:
+mc.cpp:41:19: note: can't force alignment of ref: *y.3_36[i_94]
+mc.cpp:41:19: note: vect_compute_data_ref_alignment:
+mc.cpp:41:19: note: can't force alignment of ref: *r2.4_38[i_94]
+mc.cpp:41:19: note: === vect_prune_runtime_alias_test_list ===
+mc.cpp:41:19: note: === vect_enhance_data_refs_alignment ===
+mc.cpp:41:19: note: Unknown misalignment, naturally aligned
+mc.cpp:41:19: note: Unknown misalignment, naturally aligned
+mc.cpp:41:19: note: Unknown misalignment, naturally aligned
+mc.cpp:41:19: note: vect_can_advance_ivs_p:
+mc.cpp:41:19: note: Analyze phi: .MEM_84 = PHI <.MEM_41(17), .MEM_43(20)>
+mc.cpp:41:19: note: reduc or virtual phi. skip.
+mc.cpp:41:19: note: Analyze phi: i_94 = PHI <0(17), i_44(20)>
+mc.cpp:41:19: note: vect_model_load_cost: aligned.
+mc.cpp:41:19: note: vect_get_data_access_cost: inside_cost = 12, outside_cost = 0.
+mc.cpp:41:19: note: Setting misalignment to unknown (-1).
+mc.cpp:41:19: note: vect_model_load_cost: unaligned supported by hardware.
+mc.cpp:41:19: note: vect_get_data_access_cost: inside_cost = 24, outside_cost = 0.
+mc.cpp:41:19: note: Setting misalignment to unknown (-1).
+mc.cpp:41:19: note: vect_model_store_cost: unaligned supported by hardware.
+mc.cpp:41:19: note: vect_get_data_access_cost: inside_cost = 36, outside_cost = 0.
+mc.cpp:41:19: note: Setting misalignment to unknown (-1).
+mc.cpp:41:19: note: vect_model_load_cost: unaligned supported by hardware.
+mc.cpp:41:19: note: vect_get_data_access_cost: inside_cost = 12, outside_cost = 0.
+mc.cpp:41:19: note: Setting misalignment to unknown (-1).
+mc.cpp:41:19: note: vect_model_load_cost: unaligned supported by hardware.
+mc.cpp:41:19: note: vect_get_data_access_cost: inside_cost = 24, outside_cost = 0.
+mc.cpp:41:19: note: vect_model_store_cost: aligned.
+mc.cpp:41:19: note: vect_get_data_access_cost: inside_cost = 36, outside_cost = 0.
+mc.cpp:41:19: note: cost model: epilogue peel iters set to vf/2 because loop iterations are unknown .
+mc.cpp:41:19: note: vect_model_load_cost: unaligned supported by hardware.
+mc.cpp:41:19: note: vect_get_data_access_cost: inside_cost = 12, outside_cost = 0.
+mc.cpp:41:19: note: vect_model_load_cost: unaligned supported by hardware.
+mc.cpp:41:19: note: vect_get_data_access_cost: inside_cost = 24, outside_cost = 0.
+mc.cpp:41:19: note: vect_model_store_cost: unaligned supported by hardware.
+mc.cpp:41:19: note: vect_get_data_access_cost: inside_cost = 36, outside_cost = 0.
+mc.cpp:41:19: note: cost model: epilogue peel iters set to vf/2 because loop iterations are unknown .
+mc.cpp:41:19: note: Vectorizing an unaligned access.
+mc.cpp:41:19: note: Vectorizing an unaligned access.
+mc.cpp:41:19: note: Vectorizing an unaligned access.
+mc.cpp:41:19: note: === vect_analyze_loop_operations ===
+mc.cpp:41:19: note: examining phi: .MEM_84 = PHI <.MEM_41(17), .MEM_43(20)>
+mc.cpp:41:19: note: examining phi: i_94 = PHI <0(17), i_44(20)>
+mc.cpp:41:19: note: ==> examining statement: _18 = *x.2_34[i_94];
+mc.cpp:41:19: note: num. args = 4 (not unary/binary/ternary op).
+mc.cpp:41:19: note: vect_is_simple_use: operand *x.2_34[i_94]
+mc.cpp:41:19: note: not ssa-name.
+mc.cpp:41:19: note: use not simple.
+mc.cpp:41:19: note: can't use a fully-masked loop because the target doesn't have the appropriate masked load or store.
+mc.cpp:41:19: note: vect_model_load_cost: unaligned supported by hardware.
+mc.cpp:41:19: note: vect_model_load_cost: inside_cost = 12, prologue_cost = 0 .
+mc.cpp:41:19: note: ==> examining statement: _19 = _18 * _18;
+mc.cpp:41:19: note: vect_is_simple_use: operand _18
+mc.cpp:41:19: note: def_stmt: _18 = *x.2_34[i_94];
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note: vect_is_simple_use: operand _18
+mc.cpp:41:19: note: def_stmt: _18 = *x.2_34[i_94];
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note: === vectorizable_operation ===
+mc.cpp:41:19: note: vect_model_simple_cost: inside_cost = 20, prologue_cost = 0 .
+mc.cpp:41:19: note: ==> examining statement: _20 = *y.3_36[i_94];
+mc.cpp:41:19: note: num. args = 4 (not unary/binary/ternary op).
+mc.cpp:41:19: note: vect_is_simple_use: operand *y.3_36[i_94]
+mc.cpp:41:19: note: not ssa-name.
+mc.cpp:41:19: note: use not simple.
+mc.cpp:41:19: note: vect_model_load_cost: unaligned supported by hardware.
+mc.cpp:41:19: note: vect_model_load_cost: inside_cost = 12, prologue_cost = 0 .
+mc.cpp:41:19: note: ==> examining statement: _21 = _20 * _20;
+mc.cpp:41:19: note: vect_is_simple_use: operand _20
+mc.cpp:41:19: note: def_stmt: _20 = *y.3_36[i_94];
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note: vect_is_simple_use: operand _20
+mc.cpp:41:19: note: def_stmt: _20 = *y.3_36[i_94];
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note: === vectorizable_operation ===
+mc.cpp:41:19: note: vect_model_simple_cost: inside_cost = 20, prologue_cost = 0 .
+mc.cpp:41:19: note: ==> examining statement: _22 = _19 + _21;
+mc.cpp:41:19: note: vect_is_simple_use: operand _19
+mc.cpp:41:19: note: def_stmt: _19 = _18 * _18;
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note: vect_is_simple_use: operand _21
+mc.cpp:41:19: note: def_stmt: _21 = _20 * _20;
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note: === vectorizable_operation ===
+mc.cpp:41:19: note: vect_model_simple_cost: inside_cost = 12, prologue_cost = 0 .
+mc.cpp:41:19: note: ==> examining statement: *r2.4_38[i_94] = _22;
+mc.cpp:41:19: note: vect_is_simple_use: operand _22
+mc.cpp:41:19: note: def_stmt: _22 = _19 + _21;
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note: vect_model_store_cost: unaligned supported by hardware.
+mc.cpp:41:19: note: vect_model_store_cost: inside_cost = 12, prologue_cost = 0 .
+mc.cpp:41:19: note: ==> examining statement: i_44 = i_94 + 1;
+mc.cpp:41:19: note: irrelevant.
+mc.cpp:41:19: note: ==> examining statement: if (n_28 <= i_44)
+mc.cpp:41:19: note: irrelevant.
+mc.cpp:41:19: note: not using a fully-masked loop.
+mc.cpp:41:19: note: cost model: epilogue peel iters set to vf/2 because loop iterations are unknown .
+mc.cpp:41:19: note: Cost model analysis: 
+  Vector inside of loop cost: 88
+  Vector prologue cost: 32
+  Vector epilogue cost: 80
+  Scalar iteration cost: 80
+  Scalar outside cost: 32
+  Vector outside cost: 112
+  prologue iterations: 0
+  epilogue iterations: 1
+  Calculated minimum iters for profitability: 2
+mc.cpp:41:19: note:   Runtime profitability threshold = 2
+mc.cpp:41:19: note:   Static estimate profitability threshold = 2
+mc.cpp:41:19: note: epilog loop required
+mc.cpp:41:19: note: vect_can_advance_ivs_p:
+mc.cpp:41:19: note: Analyze phi: .MEM_84 = PHI <.MEM_41(17), .MEM_43(20)>
+mc.cpp:41:19: note: reduc or virtual phi. skip.
+mc.cpp:41:19: note: Analyze phi: i_94 = PHI <0(17), i_44(20)>
+mc.cpp:41:19: note: loop vectorized
+mc.cpp:41:19: note: === vec_transform_loop ===
+mc.cpp:41:19: note: Profitability threshold is 2 loop iterations.
+mc.cpp:41:19: note: vect_update_ivs_after_vectorizer: phi: .MEM_84 = PHI <.MEM_43(20), .MEM_41(23)>
+mc.cpp:41:19: note: reduc or virtual phi. skip.
+mc.cpp:41:19: note: vect_update_ivs_after_vectorizer: phi: i_94 = PHI <i_44(20), 0(23)>
+mc.cpp:41:19: note: ------>vectorizing phi: .MEM_84 = PHI <.MEM_43(20), .MEM_41(30)>
+mc.cpp:41:19: note: ------>vectorizing phi: i_94 = PHI <i_44(20), 0(30)>
+mc.cpp:41:19: note: ------>vectorizing statement: _18 = *x.2_34[i_94];
+mc.cpp:41:19: note: transform statement.
+mc.cpp:41:19: note: transform load. ncopies = 1
+mc.cpp:41:19: note: create vector_type-pointer variable to type: vector(2) double  vectorizing an array ref: *x.2_34
+mc.cpp:41:19: note: created x.2_34
+mc.cpp:41:19: note: add new stmt: vect__18.50_115 = MEM[(double *)vectp_x.48_17];
+mc.cpp:41:19: note: ------>vectorizing statement: _19 = _18 * _18;
+mc.cpp:41:19: note: transform statement.
+mc.cpp:41:19: note: vect_is_simple_use: operand _18
+mc.cpp:41:19: note: def_stmt: _18 = *x.2_34[i_94];
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note: vect_is_simple_use: operand _18
+mc.cpp:41:19: note: def_stmt: _18 = *x.2_34[i_94];
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note: transform binary/unary operation.
+mc.cpp:41:19: note: vect_get_vec_def_for_operand: _18
+mc.cpp:41:19: note: vect_is_simple_use: operand _18
+mc.cpp:41:19: note: def_stmt: _18 = *x.2_34[i_94];
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note:   def_stmt =  _18 = *x.2_34[i_94];
+mc.cpp:41:19: note: vect_get_vec_def_for_operand: _18
+mc.cpp:41:19: note: vect_is_simple_use: operand _18
+mc.cpp:41:19: note: def_stmt: _18 = *x.2_34[i_94];
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note:   def_stmt =  _18 = *x.2_34[i_94];
+mc.cpp:41:19: note: add new stmt: vect__19.51_114 = vect__18.50_115 * vect__18.50_115;
+mc.cpp:41:19: note: ------>vectorizing statement: _20 = *y.3_36[i_94];
+mc.cpp:41:19: note: transform statement.
+mc.cpp:41:19: note: transform load. ncopies = 1
+mc.cpp:41:19: note: create vector_type-pointer variable to type: vector(2) double  vectorizing an array ref: *y.3_36
+mc.cpp:41:19: note: created y.3_36
+mc.cpp:41:19: note: add new stmt: vect__20.54_111 = MEM[(double *)vectp_y.52_113];
+mc.cpp:41:19: note: ------>vectorizing statement: _21 = _20 * _20;
+mc.cpp:41:19: note: transform statement.
+mc.cpp:41:19: note: vect_is_simple_use: operand _20
+mc.cpp:41:19: note: def_stmt: _20 = *y.3_36[i_94];
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note: vect_is_simple_use: operand _20
+mc.cpp:41:19: note: def_stmt: _20 = *y.3_36[i_94];
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note: transform binary/unary operation.
+mc.cpp:41:19: note: vect_get_vec_def_for_operand: _20
+mc.cpp:41:19: note: vect_is_simple_use: operand _20
+mc.cpp:41:19: note: def_stmt: _20 = *y.3_36[i_94];
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note:   def_stmt =  _20 = *y.3_36[i_94];
+mc.cpp:41:19: note: vect_get_vec_def_for_operand: _20
+mc.cpp:41:19: note: vect_is_simple_use: operand _20
+mc.cpp:41:19: note: def_stmt: _20 = *y.3_36[i_94];
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note:   def_stmt =  _20 = *y.3_36[i_94];
+mc.cpp:41:19: note: add new stmt: vect__21.55_112 = vect__20.54_111 * vect__20.54_111;
+mc.cpp:41:19: note: ------>vectorizing statement: _22 = _19 + _21;
+mc.cpp:41:19: note: transform statement.
+mc.cpp:41:19: note: vect_is_simple_use: operand _19
+mc.cpp:41:19: note: def_stmt: _19 = _18 * _18;
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note: vect_is_simple_use: operand _21
+mc.cpp:41:19: note: def_stmt: _21 = _20 * _20;
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note: transform binary/unary operation.
+mc.cpp:41:19: note: vect_get_vec_def_for_operand: _19
+mc.cpp:41:19: note: vect_is_simple_use: operand _19
+mc.cpp:41:19: note: def_stmt: _19 = _18 * _18;
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note:   def_stmt =  _19 = _18 * _18;
+mc.cpp:41:19: note: vect_get_vec_def_for_operand: _21
+mc.cpp:41:19: note: vect_is_simple_use: operand _21
+mc.cpp:41:19: note: def_stmt: _21 = _20 * _20;
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note:   def_stmt =  _21 = _20 * _20;
+mc.cpp:41:19: note: add new stmt: vect__22.56_86 = vect__19.51_114 + vect__21.55_112;
+mc.cpp:41:19: note: ------>vectorizing statement: *r2.4_38[i_94] = _22;
+mc.cpp:41:19: note: transform statement.
+mc.cpp:41:19: note: vect_is_simple_use: operand _22
+mc.cpp:41:19: note: def_stmt: _22 = _19 + _21;
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note: transform store. ncopies = 1
+mc.cpp:41:19: note: vect_get_vec_def_for_operand: _22
+mc.cpp:41:19: note: vect_is_simple_use: operand _22
+mc.cpp:41:19: note: def_stmt: _22 = _19 + _21;
+mc.cpp:41:19: note: type of def: internal
+mc.cpp:41:19: note:   def_stmt =  _22 = _19 + _21;
+mc.cpp:41:19: note: create vector_type-pointer variable to type: vector(2) double  vectorizing an array ref: *r2.4_38
+mc.cpp:41:19: note: created r2.4_38
+mc.cpp:41:19: note: add new stmt: MEM[(double *)vectp_r2.57_24] = vect__22.56_86;
+mc.cpp:41:19: note: ------>vectorizing statement: i_44 = i_94 + 1;
+mc.cpp:41:19: note: ------>vectorizing statement: vectp_x.48_120 = vectp_x.48_17 + 16;
+mc.cpp:41:19: note: ------>vectorizing statement: vectp_y.52_110 = vectp_y.52_113 + 16;
+mc.cpp:41:19: note: ------>vectorizing statement: vectp_r2.57_12 = vectp_r2.57_24 + 16;
+mc.cpp:41:19: note: ------>vectorizing statement: if (n_28 <= i_44)
+mc.cpp:41:19: note: New loop exit condition: if (ivtmp_14 >= bnd.45_96)
+mc.cpp:41:19: note: LOOP VECTORIZED
+
+
+Analyzing loop at mc.cpp:35
+mc.cpp:35:17: note: ===== analyze_loop_nest =====
+mc.cpp:35:17: note: === vect_analyze_loop_form ===
+mc.cpp:35:17: note: === get_loop_niters ===
+mc.cpp:35:17: note: Symbolic number of iterations is (unsigned int) n_28
+mc.cpp:35:17: note: not vectorized: loop contains function calls or data references that cannot be analyzed
+
+Analyzing loop at /opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: ===== analyze_loop_nest =====
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: === vect_analyze_loop_form ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: === get_loop_niters ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: got vectype for stmt: __x_61 = gen._M_x[_60];
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: got vectype for stmt: gen._M_x[__i_90] = __res_67;
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: === vect_analyze_scalar_cycles ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: Analyze phi: __i_90 = PHI <1(2), __i_68(22)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: Access function of PHI: {1, +, 1}_4
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: step: 1,  init: 1
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: Detected induction.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: Analyze phi: .MEM_91 = PHI <.MEM_77(2), .MEM_78(22)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: Analyze phi: ivtmp_118 = PHI <623(2), ivtmp_117(22)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: Access function of PHI: {623, +, 18446744073709551615}_4
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: step: 18446744073709551615,  init: 623
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: Detected induction.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: === vect_pattern_recog ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: vect_is_simple_use: operand __x_63
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: def_stmt: __x_63 = __x_61 ^ _62;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: vect_is_simple_use: operand __x_66
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: def_stmt: __x_66 = __x_64 + __i_90;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: === vect_analyze_data_ref_accesses ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: === vect_mark_stmts_to_be_vectorized ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: init: phi relevant? __i_90 = PHI <1(2), __i_68(22)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: init: phi relevant? .MEM_91 = PHI <.MEM_77(2), .MEM_78(22)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: init: phi relevant? ivtmp_118 = PHI <623(2), ivtmp_117(22)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: init: stmt relevant? _60 = __i_90 + 18446744073709551615;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: init: stmt relevant? __x_61 = gen._M_x[_60];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: init: stmt relevant? _62 = __x_61 >> 30;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: init: stmt relevant? __x_63 = __x_61 ^ _62;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: init: stmt relevant? __x_64 = __x_63 * 1812433253;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: init: stmt relevant? __x_66 = __x_64 + __i_90;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: init: stmt relevant? __res_67 = __x_66 & 4294967295;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: init: stmt relevant? gen._M_x[__i_90] = __res_67;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: vec_stmt_relevant_p: stmt has vdefs.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: mark relevant 5, live 0: gen._M_x[__i_90] = __res_67;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: init: stmt relevant? __i_68 = __i_90 + 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: init: stmt relevant? ivtmp_117 = ivtmp_118 - 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: init: stmt relevant? if (ivtmp_117 == 0)
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: worklist: examine stmt: gen._M_x[__i_90] = __res_67;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: vect_is_simple_use: operand __res_67
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: def_stmt: __res_67 = __x_66 & 4294967295;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: mark relevant 5, live 0: __res_67 = __x_66 & 4294967295;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: worklist: examine stmt: __res_67 = __x_66 & 4294967295;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: vect_is_simple_use: operand __x_66
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: def_stmt: __x_66 = __x_64 + __i_90;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: mark relevant 5, live 0: __x_66 = __x_64 + __i_90;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: worklist: examine stmt: __x_66 = __x_64 + __i_90;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: vect_is_simple_use: operand __x_64
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: def_stmt: __x_64 = __x_63 * 1812433253;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: mark relevant 5, live 0: __x_64 = __x_63 * 1812433253;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: vect_is_simple_use: operand __i_90
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: def_stmt: __i_90 = PHI <1(2), __i_68(22)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: type of def: induction
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: mark relevant 5, live 0: __i_90 = PHI <1(2), __i_68(22)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: worklist: examine stmt: __i_90 = PHI <1(2), __i_68(22)>
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: vect_is_simple_use: operand 1
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: vect_is_simple_use: operand __i_68
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: def_stmt: __i_68 = __i_90 + 1;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: induction value on backedge.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: worklist: examine stmt: __x_64 = __x_63 * 1812433253;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: vect_is_simple_use: operand __x_63
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: def_stmt: __x_63 = __x_61 ^ _62;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: mark relevant 5, live 0: __x_63 = __x_61 ^ _62;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: worklist: examine stmt: __x_63 = __x_61 ^ _62;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: vect_is_simple_use: operand __x_61
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: def_stmt: __x_61 = gen._M_x[_60];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: mark relevant 5, live 0: __x_61 = gen._M_x[_60];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: vect_is_simple_use: operand _62
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: def_stmt: _62 = __x_61 >> 30;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: mark relevant 5, live 0: _62 = __x_61 >> 30;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: worklist: examine stmt: _62 = __x_61 >> 30;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: vect_is_simple_use: operand __x_61
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: def_stmt: __x_61 = gen._M_x[_60];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: type of def: internal
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: mark relevant 5, live 0: __x_61 = gen._M_x[_60];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: already marked relevant/live.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: worklist: examine stmt: __x_61 = gen._M_x[_60];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: === vect_analyze_data_ref_dependences ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: dependence distance  = 1.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: not vectorized, possible dependence between data-refs gen._M_x[_60] and gen._M_x[__i_90]
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: bad data dependence.
+mc.cpp:6:5: note: vectorized 1 loops in function.
+mc.cpp:41:19: note: loop turned into non-loop; it never loops
+mc.cpp:6:5: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:328:7: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:328:7: note: got vectype for stmt: totalpe.0_1 = totalpe;
+vector(4) int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:328:7: note: got vectype for stmt: _56 = mype;
+vector(4) int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:328:7: note: got vectype for stmt: gen._M_x[0] = __res_58;
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:328:7: note: got vectype for stmt: _18 = MEM[(long unsigned int *)&gen];
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:328:7: note: === vect_analyze_data_ref_accesses ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:328:7: note: not consecutive access _56 = mype;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:328:7: note: not consecutive access totalpe.0_1 = totalpe;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:328:7: note: not consecutive access _18 = MEM[(long unsigned int *)&gen];
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:328:7: note: not consecutive access gen._M_x[0] = __res_58;
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:328:7: note: not vectorized: no grouped stores in basic block.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:328:7: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: got vectype for stmt: gen._M_x[__i_90] = __res_67;
+vector(2) long unsigned int
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: not vectorized: not enough data-refs in basic block.
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.tcc:331:32: note: ===vect_slp_analyze_bb===
+mc.cpp:33:9: note: === vect_analyze_data_refs ===
+mc.cpp:33:9: note: got vectype for stmt: gen._M_p = 624;
+vector(2) long unsigned int
+mc.cpp:33:9: note: got vectype for stmt: area_circle = 0.0;
+vector(2) double
+mc.cpp:33:9: note: got vectype for stmt: area_total = 0.0;
+vector(2) double
+mc.cpp:33:9: note: === vect_analyze_data_ref_accesses ===
+mc.cpp:33:9: note: not consecutive access gen._M_p = 624;
+mc.cpp:33:9: note: not consecutive access area_circle = 0.0;
+mc.cpp:33:9: note: not consecutive access area_total = 0.0;
+mc.cpp:33:9: note: not vectorized: no grouped stores in basic block.
+mc.cpp:35:17: note: === vect_analyze_data_refs ===
+mc.cpp:35:17: note: not vectorized: not enough data-refs in basic block.
+mc.cpp:35:17: note: ===vect_slp_analyze_bb===
+mc.cpp:35:17: note: ===vect_slp_analyze_bb===
+mc.cpp:35:17: note: ===vect_slp_analyze_bb===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.h:181:38: note: === vect_analyze_data_refs ===
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.h:181:38: note: got vectype for stmt: *x.2_34[i_95] = _74;
+vector(2) double
+/opt/gcc/gcc-8.2.0/include/c++/8.2.0/bits/random.h:181:38: note: not vectorized: not enough data-refs in basic block.
+mc.cpp:35:17: note: === vect_analyze_data_refs ===
+mc.cpp:35:17: note: got vectype for stmt: *y.3_36[i_95] = _71;
+vector(2) double
+mc.cpp:35:17: note: not vectorized: not enough data-refs in basic block.
+mc.cpp:35:17: note: ===vect_slp_analyze_bb===
+mc.cpp:35:17: note: ===vect_slp_analyze_bb===
+mc.cpp:35:17: note: === vect_analyze_data_refs ===
+mc.cpp:35:17: note: not vectorized: not enough data-refs in basic block.
+mc.cpp:35:17: note: ===vect_slp_analyze_bb===
+mc.cpp:35:17: note: === vect_analyze_data_refs ===
+mc.cpp:35:17: note: not vectorized: not enough data-refs in basic block.
+mc.cpp:35:17: note: ===vect_slp_analyze_bb===
+mc.cpp:42:11: note: === vect_analyze_data_refs ===
+mc.cpp:42:11: note: not vectorized: no vectype for stmt: vect__18.50_115 = MEM[(double *)vectp_x.48_17];
+ scalar_type: vector(2) double
+mc.cpp:42:11: note: not vectorized: no vectype for stmt: vect__20.54_111 = MEM[(double *)vectp_y.52_113];
+ scalar_type: vector(2) double
+mc.cpp:42:11: note: not vectorized: no vectype for stmt: MEM[(double *)vectp_r2.57_24] = vect__22.56_86;
+ scalar_type: vector(2) double
+mc.cpp:42:11: note: === vect_analyze_data_ref_accesses ===
+mc.cpp:42:11: note: not vectorized: no grouped stores in basic block.
+mc.cpp:42:11: note: ===vect_slp_analyze_bb===
+mc.cpp:42:11: note: ===vect_slp_analyze_bb===
+mc.cpp:42:11: note: === vect_analyze_data_refs ===
+mc.cpp:42:11: note: not vectorized: not enough data-refs in basic block.
+mc.cpp:42:11: note: ===vect_slp_analyze_bb===
+mc.cpp:41:2: note: === vect_analyze_data_refs ===
+mc.cpp:41:2: note: got vectype for stmt: _106 = *x.2_34[i_97];
+vector(2) double
+mc.cpp:41:2: note: got vectype for stmt: _104 = *y.3_36[i_97];
+vector(2) double
+mc.cpp:41:2: note: got vectype for stmt: *r2.4_38[i_97] = _102;
+vector(2) double
+mc.cpp:41:2: note: === vect_analyze_data_ref_accesses ===
+mc.cpp:41:2: note: not consecutive access _106 = *x.2_34[i_97];
+mc.cpp:41:2: note: not consecutive access _104 = *y.3_36[i_97];
+mc.cpp:41:2: note: not consecutive access *r2.4_38[i_97] = _102;
+mc.cpp:41:2: note: not vectorized: no grouped stores in basic block.
+mc.cpp:41:2: note: ===vect_slp_analyze_bb===
+mc.cpp:41:2: note: === vect_analyze_data_refs ===
+mc.cpp:41:2: note: got vectype for stmt: area_circle_lsm.42_92 = area_circle;
+vector(2) double
+mc.cpp:41:2: note: not vectorized: not enough data-refs in basic block.
+mc.cpp:41:2: note: ===vect_slp_analyze_bb===
+mc.cpp:45:3: note: === vect_analyze_data_refs ===
+mc.cpp:45:3: note: got vectype for stmt: _23 = *r2.4_38[i_93];
+vector(2) double
+mc.cpp:45:3: note: not vectorized: not enough data-refs in basic block.
+mc.cpp:45:3: note: ===vect_slp_analyze_bb===
+mc.cpp:47:19: note: === vect_analyze_data_refs ===
+mc.cpp:47:19: note: not vectorized: not enough data-refs in basic block.
+mc.cpp:47:19: note: ===vect_slp_analyze_bb===
+mc.cpp:44:19: note: === vect_analyze_data_refs ===
+mc.cpp:44:19: note: not vectorized: not enough data-refs in basic block.
+mc.cpp:44:19: note: ===vect_slp_analyze_bb===
+mc.cpp:44:19: note: ===vect_slp_analyze_bb===
+mc.cpp:44:19: note: === vect_analyze_data_refs ===
+mc.cpp:44:19: note: not vectorized: not enough data-refs in basic block.
+mc.cpp:44:19: note: ===vect_slp_analyze_bb===
+mc.cpp:44:19: note: === vect_analyze_data_refs ===
+mc.cpp:44:19: note: got vectype for stmt: area_circle = area_circle_lsm.42_119;
+vector(2) double
+mc.cpp:44:19: note: not vectorized: not enough data-refs in basic block.
+mc.cpp:44:19: note: ===vect_slp_analyze_bb===
+mc.cpp:51:2: note: === vect_analyze_data_refs ===
+mc.cpp:51:2: note: got vectype for stmt: mype.6_26 = mype;
+vector(4) int
+mc.cpp:51:2: note: not vectorized: not enough data-refs in basic block.
+mc.cpp:51:2: note: ===vect_slp_analyze_bb===
+mc.cpp:52:9: note: === vect_analyze_data_refs ===
+mc.cpp:52:9: note: got vectype for stmt: area_total.7_27 = area_total;
+vector(2) double
+mc.cpp:52:9: note: not vectorized: not enough data-refs in basic block.
+mc.cpp:52:9: note: ===vect_slp_analyze_bb===
+mc.cpp:6:5: note: === vect_analyze_data_refs ===
+mc.cpp:6:5: note: not vectorized: not enough data-refs in basic block.

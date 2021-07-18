@@ -25,7 +25,7 @@ int main() {
 		error = 3.14159265358979323846264338327950288419716 - pi;	
 		//printf("%dth, pi : %.20f \n", i, pi);
 
-		if (fabs(error) < 1e-12) {
+		if (fabs(error) < 1e-11) {
 			printf("Error : %.15f \n", error);
 			printf("%dth, pi : %.15f \n", i, pi);
 			break;
